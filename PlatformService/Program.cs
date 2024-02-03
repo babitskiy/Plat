@@ -17,6 +17,7 @@ public class Program
         builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         builder.Services.AddSwaggerGen();
 
         var app = builder.Build();
