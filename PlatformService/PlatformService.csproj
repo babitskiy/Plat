@@ -4,6 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>448d85a4-b6d1-454e-bcfb-a53e15a3020b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +13,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.25" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.25" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.25">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +26,8 @@
     <None Remove="Data\" />
     <None Remove="Dtos\" />
     <None Remove="Profiles\" />
+    <None Remove="SyncDataServices\" />
+    <None Remove="SyncDataServices\Http\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -26,5 +35,7 @@
     <Folder Include="Data\" />
     <Folder Include="Dtos\" />
     <Folder Include="Profiles\" />
+    <Folder Include="SyncDataServices\" />
+    <Folder Include="SyncDataServices\Http\" />
   </ItemGroup>
 </Project>
